@@ -1,5 +1,9 @@
-$nav-footer-color: rgb(73, 80, 87);
-$a-color: rgb(255 193 7);
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+// color letras barra de navegacion
+$logo-a-color: rgb(255 193 7);
+
+$sombra-nav: 8px 2px 10px black;;
 
 *{
   margin: 0;
@@ -7,8 +11,20 @@ $a-color: rgb(255 193 7);
   box-sizing: border-box;
 }
 
-nav{
-  background-color: $nav-footer-color;
+nav{ 
+  background-image: url(../img/fondo-nav-footer.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  a{
+    text-decoration: none;
+    span{
+      font-size: 25px;
+      padding-left: 10px;
+      color: $logo-a-color;
+
+    }
+  }
   #navbarNav{
     justify-content: flex-end;
 
@@ -17,15 +33,19 @@ nav{
 
       li{
         padding-left: 20px;
-
         a{
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          color: $a-color;
+          text-shadow: $sombra-nav;
+          font-family: 'Vollkorn', serif;
+          // font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: $logo-a-color;
           position: relative;
           padding: 0;
-          
+          transition: transform 0.5s;
+
           &.active{
             color: white;
+            transform: scale(1.08);
+            transition: transform 0.5s;
           }
           
           &::after{
@@ -45,7 +65,8 @@ nav{
           }
   
           &:hover{
-            color: white;
+            @extend .active;
+
           }
         }
       }

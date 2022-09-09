@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,17 @@
 }
 
 nav {
-  background-color: rgb(73, 80, 87);
+  background-image: url(../img/fondo-nav-footer.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+nav a {
+  text-decoration: none;
+}
+nav a span {
+  font-size: 25px;
+  padding-left: 10px;
+  color: rgb(255, 193, 7);
 }
 nav #navbarNav {
   justify-content: flex-end;
@@ -17,13 +28,17 @@ nav #navbarNav ul li {
   padding-left: 20px;
 }
 nav #navbarNav ul li a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 8px 2px 10px black;
+  font-family: "Vollkorn", serif;
   color: rgb(255, 193, 7);
   position: relative;
   padding: 0;
+  transition: transform 0.5s;
 }
-nav #navbarNav ul li a.active {
+nav #navbarNav ul li a.active, nav #navbarNav ul li a:hover {
   color: white;
+  transform: scale(1.08);
+  transition: transform 0.5s;
 }
 nav #navbarNav ul li a::after {
   content: "";
@@ -38,9 +53,6 @@ nav #navbarNav ul li a::after {
 nav #navbarNav ul li a:hover::after, nav #navbarNav ul li a.active::after {
   opacity: 1;
   width: 100%;
-}
-nav #navbarNav ul li a:hover {
-  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */
