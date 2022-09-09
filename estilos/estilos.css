@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ nav a span {
   font-size: 25px;
   padding-left: 10px;
   color: rgb(255, 193, 7);
+  font-family: "Vollkorn", serif;
 }
 nav #navbarNav {
   justify-content: flex-end;
@@ -53,6 +55,92 @@ nav #navbarNav ul li a::after {
 nav #navbarNav ul li a:hover::after, nav #navbarNav ul li a.active::after {
   opacity: 1;
   width: 100%;
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0px;
+  background-image: url(../img/fondo-h1.jpeg);
+  margin: 10px 0 10px 0 !important;
+  border: 3px dotted black;
+  font-family: "Chango", cursive;
+}
+
+.carousel {
+  margin-bottom: 10px;
+  background-color: #262425;
+}
+
+footer {
+  background-image: url(../img/fondo-nav-footer.svg);
+}
+footer .p-footer {
+  color: rgb(255, 193, 7);
+  font-size: 25px;
+  margin: 0;
+  padding-left: 5px;
+  font-family: "Vollkorn", serif;
+}
+footer div {
+  width: 25%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  align-content: center;
+}
+footer div a {
+  color: rgb(255, 193, 7);
+  text-decoration: none;
+  transition: 0.5s;
+}
+footer div a.wpp:hover {
+  color: rgb(14, 193, 67);
+}
+footer div a.ig:hover {
+  color: rgb(218, 5, 94);
+}
+footer div a.fc:hover {
+  color: rgb(16, 150, 244);
+}
+footer div a.wpp::after {
+  content: "Nuestro Whatsapp";
+  color: rgb(14, 193, 67);
+  font-family: "Vollkorn", serif;
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+footer div a.wpp:hover::after {
+  opacity: 1;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+footer div a.ig::after {
+  content: "Nuestro Instagram";
+  color: rgb(235, 1, 98);
+  font-family: "Vollkorn", serif;
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+footer div a.ig:hover::after {
+  opacity: 1;
+  padding-left: 10px;
+  transition: 0.5s;
+}
+footer div a.fc::after {
+  content: "Nuestro Facebook";
+  color: rgb(16, 150, 244);
+  font-family: "Vollkorn", serif;
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+footer div a.fc:hover::after {
+  opacity: 1;
+  padding-left: 10px;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=estilos.css.map */

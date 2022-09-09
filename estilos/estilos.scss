@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 
 // color letras barra de navegacion
 $logo-a-color: rgb(255 193 7);
+
+// Font del nav y footer
+$vollkorn: 'Vollkorn', serif;
 
 $sombra-nav: 8px 2px 10px black;;
 
@@ -22,7 +28,7 @@ nav{
       font-size: 25px;
       padding-left: 10px;
       color: $logo-a-color;
-
+      font-family: $vollkorn;
     }
   }
   #navbarNav{
@@ -35,8 +41,7 @@ nav{
         padding-left: 20px;
         a{
           text-shadow: $sombra-nav;
-          font-family: 'Vollkorn', serif;
-          // font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-family: $vollkorn;
           color: $logo-a-color;
           position: relative;
           padding: 0;
@@ -72,6 +77,115 @@ nav{
       }
 
       
+    }
+  }
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0px;
+  background-image: url(../img/fondo-h1.jpeg);
+  margin: 10px 0 10px 0 !important;
+  border: 3px dotted black;
+  font-family: 'Chango', cursive;
+}
+
+.carousel{
+  margin-bottom: 10px;
+  background-color: #262425;
+}
+
+footer{
+  background-image: url(../img/fondo-nav-footer.svg);
+
+  .p-footer{
+    color: $logo-a-color;
+    font-size: 25px;
+    margin: 0;
+    padding-left: 5px;
+    font-family: $vollkorn;
+
+  }
+
+  div{
+    width: 25%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-content: center;
+    
+    a{
+      color: $logo-a-color;
+      text-decoration: none;
+      transition: 0.5s;
+
+      // hover de los iconos
+
+      &.wpp:hover{
+        color: rgb(14, 193, 67);
+      }      
+      
+      &.ig:hover{
+        color: rgb(218, 5, 94);
+      }
+
+      &.fc:hover{
+        color: rgb(16, 150, 244);
+      }
+
+//   afters y hovers para los textos al lado de cada icono
+
+      // whatsapp
+      &.wpp::after{
+        content: 'Nuestro Whatsapp';
+        color: rgb(14, 193, 67);
+        font-family: $vollkorn;
+        font-size: 20px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      
+      &.wpp:hover::after{
+        opacity: 1;
+        transition: 0.5s;
+        padding-left: 10px;
+      }
+
+      // instagram
+
+      &.ig::after{
+        content: 'Nuestro Instagram';
+        color: rgb(235, 1, 98);
+        font-family: $vollkorn;
+        font-size: 20px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      &.ig:hover::after{
+        opacity: 1;
+        padding-left: 10px;
+        transition: 0.5s;
+      }
+
+      // facebook
+
+      &.fc::after{
+        content: 'Nuestro Facebook';
+        color: rgb(16, 150, 244);
+        font-family: $vollkorn;
+        font-size: 20px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      &.fc:hover::after{
+        opacity: 1;
+        padding-left: 10px;
+        transition: 0.5s;
+      }
     }
   }
 }
