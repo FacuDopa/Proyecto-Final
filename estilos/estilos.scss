@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 // color letras barra de navegacion
 $logo-a-color: rgb(255 193 7);
@@ -21,6 +22,7 @@ nav{
   background-image: url(../img/fondo-nav-footer.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+  transition: background-image 0.5s;
 
   a{
     text-decoration: none;
@@ -79,10 +81,16 @@ nav{
       
     }
   }
+
+  &:hover{
+    background-image: url(../img/fondo-nav-hover.svg);
+    background-size: cover;
+    transition: background-image 0.5s;
+  }
 }
 
 h1{
-  font-size: 40px;
+  font-size: 3vw !important;
   text-align: center;
   padding: 20px 0px;
   background-image: url(../img/fondo-h1.jpeg);
@@ -96,8 +104,35 @@ h1{
   background-color: #262425;
 }
 
+main{
+  .secc-nosotros{
+    margin-top: 20px;
+
+    div{
+      div{
+        h2{
+          text-shadow: 0px 0px 4px rgb(77 38 6);
+          font-size: 3vw;
+          font-family: 'Permanent Marker', cursive;
+          color: black;
+          i{
+            font-size: 2vw;
+          }
+        }
+        p{
+          font-family: 'Titan One', cursive;
+          // font-size: calc(1em + 1vw);
+          font-size: 1.5vw;
+          color: rgb(77, 38, 6);
+        }
+      }
+    }
+  }
+}
+
 footer{
   background-image: url(../img/fondo-nav-footer.svg);
+  border-top: 2px solid #262425;
 
   .p-footer{
     color: $logo-a-color;
@@ -108,83 +143,67 @@ footer{
 
   }
 
-  div{
-    width: 25%;
+  .redes{
+    width: 50vw;
     padding-left: 10px;
     display: flex;
     flex-direction: column;
     font-size: 30px;
     align-content: center;
-    
-    a{
-      color: $logo-a-color;
-      text-decoration: none;
-      transition: 0.5s;
-
-      // hover de los iconos
-
-      &.wpp:hover{
-        color: rgb(14, 193, 67);
-      }      
-      
-      &.ig:hover{
-        color: rgb(218, 5, 94);
-      }
-
-      &.fc:hover{
-        color: rgb(16, 150, 244);
-      }
-
-//   afters y hovers para los textos al lado de cada icono
-
-      // whatsapp
-      &.wpp::after{
-        content: 'Nuestro Whatsapp';
-        color: rgb(14, 193, 67);
-        font-family: $vollkorn;
-        font-size: 20px;
-        opacity: 0;
+    div{
+      a{
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
         transition: 0.5s;
-      }
-      
-      &.wpp:hover::after{
-        opacity: 1;
-        transition: 0.5s;
-        padding-left: 10px;
-      }
-
-      // instagram
-
-      &.ig::after{
-        content: 'Nuestro Instagram';
-        color: rgb(235, 1, 98);
-        font-family: $vollkorn;
-        font-size: 20px;
-        opacity: 0;
-        transition: 0.5s;
-      }
-
-      &.ig:hover::after{
-        opacity: 1;
-        padding-left: 10px;
-        transition: 0.5s;
-      }
-
-      // facebook
-
-      &.fc::after{
-        content: 'Nuestro Facebook';
-        color: rgb(16, 150, 244);
-        font-family: $vollkorn;
-        font-size: 20px;
-        opacity: 0;
-        transition: 0.5s;
-      }
-
-      &.fc:hover::after{
-        opacity: 1;
-        padding-left: 10px;
-        transition: 0.5s;
+  
+        // hover de los iconos
+  
+        &.wpp:hover{
+          color: rgb(14, 193, 67);
+        }      
+        
+        &.ig:hover{
+          color: rgb(218, 5, 94);
+        }
+  
+        &.fc:hover{
+          color: rgb(16, 150, 244);
+        }
+  
+  //   afters y hovers para los textos al lado de cada icono
+  
+        &.wpp::after, &.ig::after, &.fc::after{
+          font-family: $vollkorn;
+          font-size: 20px;
+          opacity: 0;
+          transition: 0.5s;
+        }
+  
+        // whatsapp
+        &.wpp::after{
+          content: 'Nuestro Whatsapp';
+          color: rgb(14, 193, 67);
+        }
+  
+        // instagram
+        &.ig::after{
+          content: 'Nuestro Instagram';
+          color: rgb(235, 1, 98);
+        }
+  
+        // facebook
+        &.fc::after{
+          content: 'Nuestro Facebook';
+          color: rgb(16, 150, 244);
+        }
+  
+        // hover after de las 3 redes
+        &.wpp:hover::after, &.ig:hover::after, &.fc:hover::after{
+          opacity: 1;
+          padding-left: 10px;
+          transition: 0.5s;
+        }
       }
     }
   }
