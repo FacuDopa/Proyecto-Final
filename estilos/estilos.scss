@@ -99,32 +99,73 @@ h1{
   font-family: 'Chango', cursive;
 }
 
-.carousel{
+.carousel-index{
   margin-bottom: 10px;
-  background-color: #262425;
+  border: 1px solid black;
+  background-color: rgb(92 57 10 / 82%);
+}
+
+%titulos{
+  text-shadow: 0px 0px 4px rgb(77 38 6);
+  font-size: 2.5vw;
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+}
+
+%parrafos{
+  font-family: 'Titan One', cursive;
+  font-size: 1.2vw;
+  color: rgb(77, 38, 6);
 }
 
 main{
   .secc-nosotros{
     margin-top: 20px;
+    .t-index{
+      @extend %titulos;
+      i{
+        font-size: 2vw;
+      }
+    }
+    .p-index{
+      @extend %parrafos;
+    }
+  }
+}
 
-    div{
-      div{
-        h2{
-          text-shadow: 0px 0px 4px rgb(77 38 6);
-          font-size: 3vw;
-          font-family: 'Permanent Marker', cursive;
-          color: black;
-          i{
-            font-size: 2vw;
-          }
-        }
-        p{
-          font-family: 'Titan One', cursive;
-          // font-size: calc(1em + 1vw);
-          font-size: 1.5vw;
-          color: rgb(77, 38, 6);
-        }
+
+.main-servicios{
+  .t-serv{
+    @extend %titulos;
+  }
+
+  .p-serv{
+    @extend %parrafos;
+
+    span{
+      text-decoration: underline;
+    }
+  }
+
+  .sec-cards{
+    justify-content: space-around;
+    color: white;
+
+    .card{
+      width: 400px;
+      margin-top: 15px;
+      background-color: rgb(101 59 2 / 84%);
+      transition: transform 0.5s;
+
+      &:hover{
+        box-shadow: 0px 4px 9px 5px #60686f;
+        transform: translatey(-10px);
+        transition: transform 0.7s;
+      }
+
+      img{
+        padding-top: 5px;
+        border-radius: 10px;
       }
     }
   }
