@@ -59,10 +59,12 @@ nav #navbarNav ul li a:hover::after, nav #navbarNav ul li a.active::after {
   opacity: 1;
   width: 100%;
 }
-nav:hover {
-  background-image: url(../img/fondo-nav-hover.svg);
-  background-size: cover;
-  transition: background-image 0.5s;
+@media screen and (min-width: 1024px) {
+  nav:hover {
+    background-image: url(../img/fondo-nav-hover.svg);
+    background-size: cover;
+    transition: background-image 0.5s;
+  }
 }
 
 h1 {
@@ -81,23 +83,23 @@ h1 {
   background-color: rgba(92, 57, 10, 0.82);
 }
 
-.main-servicios .t-serv, main .secc-nosotros .t-index {
+.main-ubicacion .t-ubi, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
   text-shadow: 0px 0px 4px rgb(77, 38, 6);
   font-size: 2.5vw;
   font-family: "Permanent Marker", cursive;
   color: black;
 }
 
-.main-servicios .p-serv, main .secc-nosotros .p-index {
+.main-servicios .p-serv, .main-index .secc-nosotros .p-index {
   font-family: "Titan One", cursive;
   font-size: 1.2vw;
   color: rgb(77, 38, 6);
 }
 
-main .secc-nosotros {
+.main-index .secc-nosotros {
   margin-top: 20px;
 }
-main .secc-nosotros .t-index i {
+.main-index .secc-nosotros .t-index i {
   font-size: 2vw;
 }
 .main-servicios .p-serv span {
@@ -121,6 +123,51 @@ main .secc-nosotros .t-index i {
 .main-servicios .sec-cards .card img {
   padding-top: 5px;
   border-radius: 10px;
+}
+
+.main-ubicacion .t-ubi {
+  text-align: center;
+}
+.main-ubicacion .horario-direccion section {
+  margin-top: 20px;
+}
+.main-ubicacion .horario-direccion section article {
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding-top: 10px;
+}
+.main-ubicacion .horario-direccion section article .icono {
+  width: 50px;
+  height: auto;
+  text-align: center;
+}
+.main-ubicacion .horario-direccion section article .icono i {
+  font-size: 30px;
+}
+.main-ubicacion .horario-direccion section article h3 {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  font-family: "Titan One", cursive;
+  font-size: 1.7vw;
+}
+.main-ubicacion .img-taller {
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+.main-ubicacion .img-taller img {
+  width: 50%;
+  border: 2px solid black;
+}
+@media screen and (min-width: 1024px) {
+  .main-ubicacion .img-taller img {
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+  }
+  .main-ubicacion .img-taller img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+  }
 }
 
 footer {

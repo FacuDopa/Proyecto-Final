@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+// Inicio de variables
 
 // color letras barra de navegacion
 $logo-a-color: rgb(255 193 7);
 
-// Font del nav y footer
+// Fuente del nav y footer
 $vollkorn: 'Vollkorn', serif;
 
-$sombra-nav: 8px 2px 10px black;;
+// fuente textos
+$Titan-one: 'Titan One', cursive;
+
+$sombra-nav: 8px 2px 10px black;
+
+// fin variables
 
 *{
   margin: 0;
@@ -82,10 +88,13 @@ nav{
     }
   }
 
-  &:hover{
-    background-image: url(../img/fondo-nav-hover.svg);
-    background-size: cover;
-    transition: background-image 0.5s;
+  @media screen and (min-width: 1024px) {
+    
+    &:hover{
+      background-image: url(../img/fondo-nav-hover.svg);
+      background-size: cover;
+      transition: background-image 0.5s;
+    }
   }
 }
 
@@ -113,12 +122,12 @@ h1{
 }
 
 %parrafos{
-  font-family: 'Titan One', cursive;
+  font-family: $Titan-one;
   font-size: 1.2vw;
   color: rgb(77, 38, 6);
 }
 
-main{
+.main-index{
   .secc-nosotros{
     margin-top: 20px;
     .t-index{
@@ -132,7 +141,6 @@ main{
     }
   }
 }
-
 
 .main-servicios{
   .t-serv{
@@ -168,6 +176,67 @@ main{
         border-radius: 10px;
       }
     }
+  }
+}
+
+.main-ubicacion{
+
+  .t-ubi{
+    @extend %titulos;
+    text-align: center;
+  }
+
+  .horario-direccion{
+
+    section{
+      margin-top: 20px;
+      article{
+        display: flex;
+        border-bottom: 1px solid #000;
+        padding-top: 10px;
+
+        .icono{
+          width: 50px;
+          height: auto;
+          text-align: center;
+    
+          i{
+            font-size: 30px;
+          }
+        }
+
+        h3{
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+          font-family: $Titan-one;
+          font-size: 1.7vw;
+        }
+      }
+    }
+  }
+
+  .img-taller{
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+
+    img{
+      width: 50%;
+      border: 2px solid black;
+
+      @media screen and (min-width: 1024px) {
+        &{
+          filter: grayscale(100%);
+          transition: filter 0.5s;
+  
+          &:hover{
+            filter: grayscale(0%);
+            transition: filter 0.5s;
+          }
+        }
+      }
+    }
+
   }
 }
 
