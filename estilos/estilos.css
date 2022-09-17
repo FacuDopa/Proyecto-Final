@@ -2,6 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+.main-contacto .t-cont, .main-ubicacion .t-ubi, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
+  text-shadow: 0px 0px 4px rgb(77, 38, 6);
+  font-size: 2.5vw;
+  font-family: "Permanent Marker", cursive;
+  color: black;
+}
+
+.main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
+  font-family: "Titan One", cursive;
+  font-size: 1.2vw;
+  color: rgb(77, 38, 6);
+}
+
+.main-contacto .sec-formulario .formulario .boton button:hover, .main-contacto .sec-formulario .formulario .borde:focus, .main-contacto .sec-formulario .formulario textarea:focus, .main-contacto .sec-formulario .formulario .metodo-cont:focus, .main-contacto .sec-formulario .formulario .borde:hover, .main-contacto .sec-formulario .formulario textarea:hover, .main-contacto .sec-formulario .formulario .metodo-cont:hover, .main-contacto .sec-formulario .formulario textarea:hover {
+  border: 2px solid;
+  border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+  border-image-slice: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +37,7 @@ nav a {
   text-decoration: none;
 }
 nav a span {
-  font-size: 25px;
+  font-size: 2.5vw;
   padding-left: 10px;
   color: rgb(255, 193, 7);
   font-family: "Vollkorn", serif;
@@ -59,7 +78,7 @@ nav #navbarNav ul li a:hover::after, nav #navbarNav ul li a.active::after {
   opacity: 1;
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   nav:hover {
     background-image: url(../img/fondo-nav-hover.svg);
     background-size: cover;
@@ -83,19 +102,6 @@ h1 {
   background-color: rgba(92, 57, 10, 0.82);
 }
 
-.main-ubicacion .t-ubi, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-  text-shadow: 0px 0px 4px rgb(77, 38, 6);
-  font-size: 2.5vw;
-  font-family: "Permanent Marker", cursive;
-  color: black;
-}
-
-.main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-  font-family: "Titan One", cursive;
-  font-size: 1.2vw;
-  color: rgb(77, 38, 6);
-}
-
 .main-index .secc-nosotros {
   margin-top: 20px;
 }
@@ -115,10 +121,12 @@ h1 {
   background-color: rgba(101, 59, 2, 0.84);
   transition: transform 0.5s;
 }
-.main-servicios .sec-cards .card:hover {
-  box-shadow: 0px 4px 9px 5px #60686f;
-  transform: translatey(-10px);
-  transition: transform 0.7s;
+@media screen and (min-width: 1400px) {
+  .main-servicios .sec-cards .card:hover {
+    box-shadow: 0px 4px 9px 5px #60686f;
+    transform: translatey(-10px);
+    transition: transform 0.7s;
+  }
 }
 .main-servicios .sec-cards .card img {
   padding-top: 5px;
@@ -159,7 +167,7 @@ h1 {
   width: 50%;
   border: 2px solid black;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   .main-ubicacion .img-taller img {
     filter: grayscale(100%);
     transition: filter 0.5s;
@@ -170,6 +178,45 @@ h1 {
   }
 }
 
+.main-contacto .sec-formulario {
+  width: 70%;
+  border: 5px solid gray;
+  border-image: linear-gradient(43deg, #000000 25%, #cfa20e 81%);
+  border-image-slice: 1;
+  transition: border-image 0.5s;
+}
+@media screen and (min-width: 1400px) {
+  .main-contacto .sec-formulario:hover {
+    border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+    border-image-slice: 1;
+    transition: border-image 0.5s;
+  }
+}
+.main-contacto .sec-formulario .formulario {
+  color: brown;
+}
+.main-contacto .sec-formulario .formulario .t-cont {
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-contacto .sec-formulario .formulario .borde, .main-contacto .sec-formulario .formulario textarea, .main-contacto .sec-formulario .formulario .metodo-cont, .main-contacto .sec-formulario .formulario textarea {
+  border-color: black;
+}
+.main-contacto .sec-formulario .formulario .borde:focus, .main-contacto .sec-formulario .formulario textarea:focus, .main-contacto .sec-formulario .formulario .metodo-cont:focus, .main-contacto .sec-formulario .formulario textarea:focus {
+  box-shadow: none;
+}
+.main-contacto .sec-formulario .formulario .metodo-cont, .main-contacto .sec-formulario .formulario textarea {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding-left: 10px;
+}
+.main-contacto .sec-formulario .formulario textarea {
+  width: 100%;
+}
+.main-contacto .sec-formulario .formulario .boton button {
+  border-radius: 7px;
+  padding: 5px;
+}
 footer {
   background-image: url(../img/fondo-nav-footer.svg);
   border-top: 2px solid #262425;
