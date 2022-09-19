@@ -4,64 +4,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
   text-shadow: 0px 0px 4px rgb(77, 38, 6);
-  font-size: 2.5vw;
+  font-size: 40px;
   font-family: "Permanent Marker", cursive;
   color: black;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 484px) {
   .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-    font-size: 2.2vw;
+    font-size: 28px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 346px) {
   .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-    font-size: 2.8vw;
-  }
-}
-@media screen and (max-width: 425px) {
-  .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-    font-size: 3.4vw;
-  }
-}
-@media screen and (max-width: 375px) {
-  .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-    font-size: 3.8vw;
-  }
-}
-@media screen and (max-width: 320px) {
-  .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
-    font-size: 4.2vw;
+    font-size: 20px;
   }
 }
 
 .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
   font-family: "Titan One", cursive;
-  font-size: 1.2vw;
+  font-size: 25px;
   color: rgb(77, 38, 6);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 484px) {
   .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-    font-size: 1.8vw;
+    font-size: 18px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 346px) {
   .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-    font-size: 2.2vw;
-  }
-}
-@media screen and (max-width: 425px) {
-  .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-    font-size: 2.8vw;
-  }
-}
-@media screen and (max-width: 375px) {
-  .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-    font-size: 3vw;
-  }
-}
-@media screen and (max-width: 320px) {
-  .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
-    font-size: 3.2vw;
+    font-size: 15px;
   }
 }
 
@@ -94,9 +64,22 @@ nav {
   background-repeat: no-repeat;
   transition: background-image 0.5s;
 }
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 1400px) {
+  nav:hover {
+    background-image: url(../img/fondo-nav-hover.svg);
+    background-size: cover;
+    transition: background-image 0.5s;
+  }
+}
+@media screen and (min-width: 900px) {
   nav {
     background-size: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    background-image: url(../img/fondo-nav-footer-mobil.jpg);
+    background-size: cover;
   }
 }
 nav a {
@@ -111,19 +94,24 @@ nav a {
   }
 }
 nav a span {
-  font-size: 2vw;
+  font-size: 25px;
   padding-left: 10px;
   color: rgb(255, 193, 7);
   font-family: "Vollkorn", serif;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 490px) {
   nav a span {
-    font-size: 3vw;
+    font-size: 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
   nav a span {
-    font-size: 4vw;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 333px) {
+  nav a span {
+    font-size: 12px;
   }
 }
 nav #navbarNav {
@@ -188,22 +176,24 @@ nav #navbarNav ul li a.active::after {
     transition: transform 0.5s;
   }
 }
-@media screen and (min-width: 1400px) {
-  nav:hover {
-    background-image: url(../img/fondo-nav-hover.svg);
-    background-size: cover;
-    transition: background-image 0.5s;
-  }
-}
 
 h1 {
-  font-size: 3vw !important;
   text-align: center;
   padding: 20px 0px;
   background-image: url(../img/fondo-h1.jpeg);
   margin: 10px 0 10px 0 !important;
   border: 3px dotted black;
   font-family: "Chango", cursive;
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 25px !important;
+  }
+}
+@media screen and (max-width: 358px) {
+  h1 {
+    font-size: 20px !important;
+  }
 }
 
 .carousel-index {
@@ -215,8 +205,54 @@ h1 {
 .main-index .secc-nosotros {
   margin-top: 20px;
 }
-.main-index .secc-nosotros .t-index i {
-  font-size: 2vw;
+@media screen and (max-width: 991px) {
+  .main-index .secc-nosotros .p-index {
+    margin-bottom: 25px;
+  }
+}
+.main-index .secc-nosotros .p-index span {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.main-index .secc-nosotros .p-index span a {
+  color: rgb(77, 38, 6);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 954px) {
+  .main-servicios .t-serv {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 694px) {
+  .main-servicios .t-serv {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-servicios .t-serv {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-servicios .t-serv {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 954px) {
+  .main-servicios .p-serv {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 694px) {
+  .main-servicios .p-serv {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 583px) {
+  .main-servicios .p-serv {
+    font-size: 12px;
+  }
 }
 .main-servicios .p-serv span {
   text-decoration: underline;
@@ -243,6 +279,14 @@ h1 {
     width: 300px;
   }
 }
+@media screen and (max-width: 425px) {
+  .main-servicios .sec-cards .card h4 {
+    font-size: 20px;
+  }
+  .main-servicios .sec-cards .card p {
+    font-size: 15px;
+  }
+}
 .main-servicios .sec-cards .card img {
   padding-top: 5px;
   border-radius: 10px;
@@ -255,6 +299,7 @@ h1 {
 }
 .main-galeria .t-galeria {
   text-align: center;
+  text-shadow: 0 0 13px white, 0 0 13px white;
 }
 .main-galeria .galeria {
   width: 97%;
@@ -458,7 +503,17 @@ h1 {
   align-items: center;
   padding-left: 5px;
   font-family: "Titan One", cursive;
-  font-size: 1.7vw;
+  font-size: 20px;
+}
+@media screen and (max-width: 640px) {
+  .main-ubicacion .horario-direccion section article h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-ubicacion .horario-direccion section article h3 {
+    font-size: 12px;
+  }
 }
 .main-ubicacion .img-taller {
   flex-wrap: nowrap;
