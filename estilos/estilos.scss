@@ -91,8 +91,11 @@ $menos-rec: 1400px;
 nav{ 
   background-image: url(../img/fondo-nav-footer.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
   transition: background-image 0.5s;
+
+  @media screen and (min-width: 370px) {
+    background-size: 100%;
+  }
 
   // logo
   a{
@@ -108,12 +111,21 @@ nav{
     }
 
     span{
-      font-size: 2.5vw;
+      font-size: 2vw;
       padding-left: 10px;
       color: $logo-a-color;
       font-family: $vollkorn;
+
+      @media screen and (max-width: 700px) {
+        font-size: 3vw;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 4vw;
+      }
     }
   }
+
   #navbarNav{
     justify-content: flex-end;
 
@@ -134,32 +146,56 @@ nav{
             color: white;
             transform: scale(1.08);
             transition: transform 0.5s;
-          }
-          
-          &::after{
-            content: '';
-            border-bottom: 3px solid black;
-            bottom: 0px;
-            left: 0px;
-            position: absolute;
-            width: 10%;
-            opacity: 0;
-            transition: 0.5s;
-          }
-  
-          &:hover::after, &.active::after{
-            opacity: 1;
-            width: 100%;
-          }
-  
-          &:hover{
-            @extend .active;
 
+            &::after{
+              content: '';
+              border-bottom: 3px solid black;
+              bottom: 0px;
+              left: 0px;
+              position: absolute;
+              width: 10%;
+              opacity: 0;
+              transition: 0.5s;
+            }
+
+            &::after{
+              opacity: 1;
+              width: 100%;
+            }
+
+            @media screen and (max-width: $menos-rec) {
+              transform: scale(1);
+            }
+          }
+
+
+          @media screen and (min-width: $menos-rec) {
+            &::after{
+              content: '';
+              border-bottom: 3px solid black;
+              bottom: 0px;
+              left: 0px;
+              position: absolute;
+              width: 10%;
+              opacity: 0;
+              transition: 0.5s;
+            }
+  
+  
+    
+            &:hover::after, &.active::after{
+              opacity: 1;
+              width: 100%;
+            }
+    
+            &:hover{
+              color: white;
+              transform: scale(1.08);
+              transition: transform 0.5s;
+            }
           }
         }
       }
-
-      
     }
   }
 
@@ -235,6 +271,10 @@ h1{
           transform: translatey(-10px);
           transition: transform 0.7s;
         }
+      }
+
+      @media screen and (max-width: 470px) {
+        width: 300px;
       }
 
       img{
@@ -484,73 +524,93 @@ footer{
 
   .p-footer{
     color: $logo-a-color;
+    text-shadow: $sombra-nav;
     font-size: 25px;
     margin: 0;
     padding-left: 5px;
     font-family: $vollkorn;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-left: 10px;
 
   }
 
   .redes{
-    width: 50vw;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     font-size: 30px;
     align-content: center;
+    display: flex;
+
+    @media screen and (max-width: 451px) {
+      
+    }
+
     div{
+
+      @media screen and (max-width: $menos-rec) {
+        margin-bottom: 15px;
+      }
+
       a{
-        color: black;
+        color: rgb(255, 255, 255);
         font-weight: bold;
         text-decoration: none;
-        transition: 0.5s;
-  
-        // hover de los iconos
-  
-        &.wpp:hover{
-          color: rgb(14, 193, 67);
-        }      
         
-        &.ig:hover{
-          color: rgb(218, 5, 94);
-        }
-  
-        &.fc:hover{
-          color: rgb(16, 150, 244);
-        }
-  
-  //   afters y hovers para los textos al lado de cada icono
-  
-        &.wpp::after, &.ig::after, &.fc::after{
-          font-family: $vollkorn;
-          font-size: 20px;
-          opacity: 0;
+        @media screen and (min-width: $menos-rec) {        
           transition: 0.5s;
+          &.wpp:hover{
+            color: rgb(14, 193, 67);
+          }      
+          
+          &.ig:hover{
+            color: rgb(218, 5, 94);
+          }
+    
+          &.fc:hover{
+            color: rgb(16, 150, 244);
+          }
+    
+    //   afters y hovers para los textos al lado de cada icono
+    
+          &.wpp::after, &.ig::after, &.fc::after{
+            font-family: $vollkorn;
+            font-size: 20px;
+            opacity: 0;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+          }
+    
+          // whatsapp
+          &.wpp::after{
+            content: 'Nuestro Whatsapp';
+            color: rgb(14, 193, 67);
+          }
+    
+          // instagram
+          &.ig::after{
+            content: 'Nuestro Instagram';
+            color: rgb(235, 1, 98);
+          }
+    
+          // facebook
+          &.fc::after{
+            content: 'Nuestro Facebook';
+            color: rgb(16, 150, 244);
+          }
+    
+          // hover after de las 3 redes
+          &.wpp:hover::after, &.ig:hover::after, &.fc:hover::after{
+            opacity: 1;
+            padding-left: 10px;
+            transition: 0.5s;
+          }
         }
-  
-        // whatsapp
-        &.wpp::after{
-          content: 'Nuestro Whatsapp';
-          color: rgb(14, 193, 67);
-        }
-  
-        // instagram
-        &.ig::after{
-          content: 'Nuestro Instagram';
-          color: rgb(235, 1, 98);
-        }
-  
-        // facebook
-        &.fc::after{
-          content: 'Nuestro Facebook';
-          color: rgb(16, 150, 244);
-        }
-  
-        // hover after de las 3 redes
-        &.wpp:hover::after, &.ig:hover::after, &.fc:hover::after{
-          opacity: 1;
-          padding-left: 10px;
-          transition: 0.5s;
+        // hover de los iconos
+
+        i{
+          display: flex;
+          justify-content: center;
         }
       }
     }
