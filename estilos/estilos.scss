@@ -81,6 +81,18 @@ $menos-rec: 1400px;
   border-image-slice: 1;
 }
 
+%texto-footer{
+  color: $logo-a-color;
+  text-shadow: $sombra-nav;
+  font-size: 25px;
+  margin: 0;
+  padding-left: 5px;
+  font-family: $vollkorn;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -522,17 +534,30 @@ footer{
   background-image: url(../img/fondo-nav-footer.svg);
   border-top: 2px solid #262425;
 
-  .p-footer{
-    color: $logo-a-color;
-    text-shadow: $sombra-nav;
-    font-size: 25px;
-    margin: 0;
-    padding-left: 5px;
-    font-family: $vollkorn;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-left: 10px;
+  .m-footer{
+    @extend %texto-footer;
 
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 401px) {
+      display: none;
+    }
+
+  }
+
+  .p-footer{
+    @extend %texto-footer;
+    display: none;
+
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 400px) {
+      display: inline-block;
+    }
   }
 
   .redes{
@@ -548,7 +573,7 @@ footer{
     div{
 
       @media screen and (max-width: $menos-rec) {
-        margin-bottom: 15px;
+        padding-bottom: 15px;
       }
 
       a{
