@@ -27,12 +27,52 @@ $menos-rec: 1400px;
   font-size: 2.5vw;
   font-family: 'Permanent Marker', cursive;
   color: black;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2.2vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.8vw;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 3.4vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 3.8vw;
+  }
+  
+  @media screen and (max-width: 320px) {
+    font-size: 4.2vw;
+  }
 }
 
 %parrafos{
   font-family: $Titan-one;
   font-size: 1.2vw;
   color: rgb(77, 38, 6);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1.8vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.2vw;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 2.8vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 3vw;
+  }
+  
+  @media screen and (max-width: 320px) {
+    font-size: 3.2vw;
+  }
 }
 
 %bordes-contactos{
@@ -57,6 +97,16 @@ nav{
   // logo
   a{
     text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      img{
+        width: 15%;
+        height: auto;
+      }
+    }
+
     span{
       font-size: 2.5vw;
       padding-left: 10px;
@@ -196,7 +246,96 @@ h1{
 }
 
 // -inicio -css -galeria
+@mixin galeria($cstart, $cend, $rowstart, $rowend, $bg_size) {
+  grid-column-start: $cstart;
+  grid-column-end: $cend;
+  grid-row-start: $rowstart;
+  grid-row-end: $rowend;
+  background-size: $bg_size;
+}
 
+.main-galeria{
+  background-image: url(../img/imagen_fondo_galeria.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  
+  .t-galeria{
+    @extend %titulos;
+    text-align: center
+  }
+
+  .galeria{
+    width: 97%;
+    margin-left: 1.5%;
+    padding-bottom: 20px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    grid-gap: 15px;
+    
+    .img{
+      border: 2px solid black;
+      border-radius: 20px;
+      background-position: center;
+      transition: transform 0.8s, background-image 0.6s;
+
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          transform: scale(1.02);
+          transition: transform 0.8s, background-image 0.6s;
+        } 
+      }
+    }
+      
+    .img1{
+      @include galeria(1, 2, 1, 3, cover);
+      background-image: url(../img/proceso1.jpg);
+    }
+      
+    .img2{
+      @include galeria(2, 4, 1, 2, cover);
+      background-image: url(../img/img-carrusel2-img-galeria.jpg);
+    }
+      
+    .img3{
+      @include galeria(2, 3, 2, 3, cover);
+      background-image: url(../img/mueble1.jpg);
+    }
+      
+    .img4{
+      @include galeria(3, 4, 2, 4, cover);
+      background-image: url(../img/porta_joystick.jpg);
+      
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          background-image: url(../img/porta_joystick-1.jpg);
+          background-size: cover;
+        }
+      }
+    }
+      
+    .img5{
+      @include galeria(1, 2, 3, 4, cover);
+      background-image: url(../img/banco.jpg);
+    }
+      
+    .img6{
+      @include galeria(2, 3, 3, 4, cover);
+      background-image: url(../img/lapicero.jpeg);
+      background-position: center;
+
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          background-image: url(../img/lapicero-2.jpg);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+@import "mediaqueries-galeria";
 
 // -inicio -css -ubicacion
 .main-ubicacion{
@@ -276,6 +415,10 @@ h1{
     border-image: linear-gradient(43deg, #000000 25%, #cfa20e 81%);
     border-image-slice: 1;
     transition: border-image 0.5s;
+
+    @media screen and (max-width: 425px) {
+      width: 90%;
+    }
 
     @media screen and (min-width: $menos-rec) {
       &:hover{
