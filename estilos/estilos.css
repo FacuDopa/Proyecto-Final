@@ -63,7 +63,7 @@ nav {
   background-repeat: no-repeat;
   transition: background-image 0.5s;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   nav:hover {
     background-image: url(../img/fondo-nav-hover.svg);
     background-size: cover;
@@ -149,12 +149,12 @@ nav #navbarNav ul li a.active::after {
   opacity: 1;
   width: 100%;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   nav #navbarNav ul li a.active {
     transform: scale(1);
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   nav #navbarNav ul li a::after {
     content: "";
     border-bottom: 3px solid black;
@@ -266,7 +266,7 @@ h1 {
   background-color: rgba(101, 59, 2, 0.84);
   transition: transform 0.5s;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-servicios .sec-cards .card:hover {
     box-shadow: 0px 4px 9px 5px #60686f;
     transform: translatey(-10px);
@@ -316,7 +316,7 @@ h1 {
   background-position: center;
   transition: transform 0.8s, background-image 0.6s;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-galeria .galeria .img:hover {
     transform: scale(1.02);
     transition: transform 0.8s, background-image 0.6s;
@@ -354,7 +354,7 @@ h1 {
   background-size: cover;
   background-image: url(../img/porta_joystick.jpg);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-galeria .galeria .img4:hover {
     background-image: url(../img/porta_joystick-1.jpg);
     background-size: cover;
@@ -377,7 +377,7 @@ h1 {
   background-image: url(../img/lapicero.jpeg);
   background-position: center;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-galeria .galeria .img6:hover {
     background-image: url(../img/lapicero-2.jpg);
     background-size: cover;
@@ -522,7 +522,7 @@ h1 {
   width: 50%;
   border: 2px solid black;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-ubicacion .img-taller img {
     filter: grayscale(100%);
     transition: filter 0.5s;
@@ -545,7 +545,7 @@ h1 {
     width: 90%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .main-contacto .sec-formulario:hover {
     border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
     border-image-slice: 1;
@@ -615,7 +615,7 @@ footer .redes {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   footer .redes div {
     padding-bottom: 15px;
   }
@@ -625,7 +625,7 @@ footer .redes div a {
   font-weight: bold;
   text-decoration: none;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   footer .redes div a {
     transition: 0.5s;
   }
