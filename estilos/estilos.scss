@@ -66,7 +66,6 @@ $menos-rec: 1400px;
   text-shadow: $sombra-nav;
   font-size: 25px;
   margin: 0;
-  padding-left: 5px;
   font-family: $vollkorn;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -624,12 +623,12 @@ footer{
 
   .redes{
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
     align-content: center;
     display: flex;
 
     @media screen and (max-width: 451px) {
-      
+      font-size: 30px;
     }
 
     div{
